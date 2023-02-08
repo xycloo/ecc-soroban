@@ -1,0 +1,23 @@
+[package]
+name = "soroban-groth16-verifier-test"
+version = "0.0.0"
+authors = ["Xycloo Labs <hello@xycloo.com>"]
+license = "Apache-2.0"
+edition = "2021"
+publish = false
+
+[lib]
+crate-type = ["cdylib"]
+doctest = false
+
+
+[dependencies]
+ark-ff = { version = "^0.3.0", default-features = false }
+ark-ec = { version = "^0.3.0", default-features = false }
+ark-serialize = { version = "^0.3.0", default-features = false, features = [ "derive" ] }
+ark-std = { version = "^0.3.0", default-features = false }
+ark-bls12-377 = { version = "^0.3.0", default-features = false, features = ["curve"] }
+soroban-sdk = { workspace = true }
+
+[dev_dependencies]
+soroban-sdk = { workspace = true, features = ["testutils"] }

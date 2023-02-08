@@ -1,0 +1,10 @@
+[workspace]
+resolver = "2"
+
+members = [
+    "groth-16-verifier",
+]
+
+
+[workspace.dependencies.soroban-sdk]
+version = "0.4.2"
