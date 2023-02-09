@@ -1,5 +1,4 @@
 #![no_std]
-#![feature(default_alloc_error_handler)]
 use crate::key_wrap::build_vk;
 use ark_bls12_377::Bls12_377;
 use core::str::FromStr;
@@ -7,21 +6,11 @@ use soroban_sdk::{contractimpl, symbol, vec, Env, Symbol, Vec};
 
 extern crate alloc;
 
-struct MyAllocator;
+extern crate wee_alloc;
 
-unsafe impl alloc::alloc::GlobalAlloc for MyAllocator {
-    unsafe fn alloc(&self, layout: alloc::alloc::Layout) -> *mut u8 {
-        alloc::alloc::alloc(layout)
-    }
-
-    unsafe fn dealloc(&self, ptr: *mut u8, layout: alloc::alloc::Layout) {
-        alloc::alloc::dealloc(ptr, layout)
-    }
-}
-
+// Use `wee_alloc` as the global allocator.
 #[global_allocator]
-static GLOBAL: MyAllocator = MyAllocator;
-
+static ALLOC: wee_alloc::WeeAlloc = wee_alloc::WeeAlloc::INIT;
 pub struct TestVerifier;
 
 #[contractimpl]

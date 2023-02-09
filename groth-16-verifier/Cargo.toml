@@ -18,6 +18,7 @@ ark-serialize = { version = "^0.3.0", default-features = false, features = [ "de
 ark-std = { version = "^0.3.0", default-features = false }
 ark-bls12-377 = { version = "^0.3.0", default-features = false, features = ["curve"] }
 soroban-sdk = { workspace = true }
+wee_alloc = "0.4.5"
 
 [dev_dependencies]
 soroban-sdk = { workspace = true, features = ["testutils"] }
