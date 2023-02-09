@@ -22,3 +22,4 @@ wee_alloc = "0.4.5"
 
 [dev_dependencies]
 soroban-sdk = { workspace = true, features = ["testutils"] }
+hex = "0.3.1"

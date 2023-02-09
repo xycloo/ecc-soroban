@@ -490,6 +490,12 @@ checksum = "8a9ee70c43aaf417c914396645a0fa852624801b24ebb7ae78fe8272889ac888"
 
 [[package]]
 name = "hex"
+version = "0.3.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "805026a5d0141ffc30abb3be3173848ad46a1b1664fe632428479619a3644d77"
+
+[[package]]
+name = "hex"
 version = "0.4.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "7f24254aa9a54b5c858eaee2f5bccdb46aaf0e486a595ed5fd8f86ba55232a70"
@@ -898,7 +904,7 @@ checksum = "30d904179146de381af4c93d3af6ca4984b3152db687dacb9c3c35e86f39809c"
 dependencies = [
  "base64",
  "chrono",
- "hex",
+ "hex 0.4.3",
  "indexmap",
  "serde",
  "serde_json",
@@ -982,7 +988,7 @@ dependencies = [
  "curve25519-dalek",
  "dyn-fmt",
  "ed25519-dalek",
- "hex",
+ "hex 0.4.3",
  "log",
  "num-derive",
  "num-integer",
@@ -1020,6 +1026,7 @@ dependencies = [
  "ark-ff",
  "ark-serialize",
  "ark-std",
+ "hex 0.3.2",
  "soroban-sdk",
  "wee_alloc",
 ]
@@ -1157,7 +1164,7 @@ checksum = "bac58e511201462993a311354f88a14191e056f6c39ba79d8be9f644e35dd166"
 dependencies = [
  "base64",
  "crate-git-revision",
- "hex",
+ "hex 0.4.3",
  "serde",
  "serde_with",
 ]
